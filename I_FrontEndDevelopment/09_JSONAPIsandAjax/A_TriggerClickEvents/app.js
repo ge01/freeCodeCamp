@@ -1,7 +1,13 @@
 $(document).ready(function() {
-  // Only change code below this line.
+
   $("#getMessage").on("click", function(){
-    $(".message").html("Here is the message");
-  });    
-  // Only change code above this line.
+    // Only change code below this line.
+
+    $.getJSON("/json/cats.json", function(json) {
+$(".message").html(JSON.stringify(json));
+});
+
+    // Only change code above this line.
+  });
+
 });
